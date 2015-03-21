@@ -1,0 +1,10 @@
+{
+  "name": "coaws",
+  "version": "0.0.0",
+  "description": "Small glue wrapper for making aws-sdk compatable with co.",
+  "dependencies": {
+    "aws-sdk": "^2.1.18",
+    "coffee-script": "^1.9.1",
+    "thunkify": "^2.1.2"
+  }
+}
