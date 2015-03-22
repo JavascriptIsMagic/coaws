@@ -8,7 +8,7 @@ module.exports = class Coaws extends Aws
       do (service) ->
         Coaws[key] = class Service extends service
           constructor: ->
-            superApply arguments
+            super arguments...
             for key, method of @
               if method instanceof Function
                 Service::[key] = thunkify method.bind service
