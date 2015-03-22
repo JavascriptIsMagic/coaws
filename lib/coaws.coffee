@@ -11,4 +11,4 @@ module.exports = class Coaws extends Aws
             super arguments...
             for key, method of @
               if method instanceof Function
-                Service::[key] = thunkify method.bind service
+                @[key] = thunkify method.bind service
