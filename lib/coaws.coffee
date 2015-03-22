@@ -3,10 +3,14 @@ thunkify = require 'thunkify'
 
 # Coaws go moo
 module.exports = class Coaws extends Aws
-  for own serviceName, service of Aws
+  for own key, service of Aws
     if service instanceof Function
-      @[serviceName] = class Service extends service
-        for own methodName, method of service::
-          if method instanceof Function
-            Service::[methodName] = thunkify method.bind service
-            Service::[methodName + '$'] = method
+      do (service) ->
+        Coaws["#{key}$"] = service
+        Coaws[key] = class Service extends service
+          constructor: ->
+            super()
+            for key, method of @
+              if method instanceof Function
+                Service::["#{key}$"] = method
+                Service::[key] = thunkify method.bind service
