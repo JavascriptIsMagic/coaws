@@ -9,5 +9,5 @@ module.exports = class Coaws extends Aws
           @service = new service options
           for key, method of @service
             if method instanceof Function
-              @[key] = thunkify method.bind service
+              @[key] = thunkify method.bind @service
           @__proto__ = @service
