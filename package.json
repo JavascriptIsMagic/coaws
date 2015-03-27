@@ -1,10 +1,29 @@
 {
   "name": "coaws",
-  "version": "0.0.0",
-  "description": "Small glue wrapper for making aws-sdk compatable with co.",
+  "version": "0.1.0",
+  "description": "co yield your amazon aws-sdk!",
   "dependencies": {
-    "aws-sdk": "^2.1.18",
-    "coffee-script": "^1.9.1",
-    "thunkify": "^2.1.2"
-  }
+    "aws-sdk": "*",
+    "coffee-script": ">=1.9",
+    "thunkify": "2"
+  },
+  "keywords": [
+    "co",
+    "aws-sdk",
+    "koa",
+    "koala",
+    "send",
+    "s3",
+    "ses",
+    "ec2",
+    "amazon",
+    "aws",
+    "coaws"
+  ],
+  "author": "Brian <javascriptismagic@gmail.com>",
+  "license": "Unlicence",
+  "bugs": {
+    "url": "https://github.com/javascriptismagic/koa-send-s3/issues"
+  },
+  "homepage": "https://github.com/javascriptismagic/koa-send-s3"
 }
