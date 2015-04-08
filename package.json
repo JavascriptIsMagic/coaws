@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "description": "co yield your amazon aws-sdk!",
   "dependencies": {
-    "aws-sdk": "*",
     "coffee-script": ">=1.9",
     "thunkify": "2"
+  },
+  "peerDependencies": {
+    "aws-sdk": "*"
   },
   "keywords": [
     "co",
@@ -23,7 +25,7 @@
   "author": "Brian <javascriptismagic@gmail.com>",
   "license": "Unlicence",
   "bugs": {
-    "url": "https://github.com/javascriptismagic/koa-send-s3/issues"
+    "url": "https://github.com/javascriptismagic/coaws/issues"
   },
-  "homepage": "https://github.com/javascriptismagic/koa-send-s3"
+  "homepage": "https://github.com/javascriptismagic/coaws"
 }
